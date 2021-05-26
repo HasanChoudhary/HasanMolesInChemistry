@@ -1,5 +1,6 @@
+var grade = 0;
 function check(){
-    var grade = 0;
+    grade = 0;
     var q1 = document.test.question1.value;
     var q2 = document.test.question2.value;
     var q3 = document.test.question3.value;
@@ -20,6 +21,24 @@ function check(){
     if(q4 == "0.8385"){
         grade++
     }
-    
-    document.write(grade);
+
+    if(grade == 4){
+        window.location.href = "4OnTest.html";
+    }
+
+    else if(grade >= 2 && grade <= 3){
+        alert("you got " + grade + " questions right! (press ok to continue)");
+        window.location.href = "2or3OnTest.html";
+    }
+
+    else{
+        window.location.href = "0or1OnTest.html";
+        if (grade == 1){
+            alert("you got " + grade + " question right! (press ok to continue)");
+        }
+        else{
+            alert("you got " + grade + " questions right! (press ok to continue)");
+        }
+    }
 }
+
