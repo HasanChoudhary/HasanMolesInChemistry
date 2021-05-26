@@ -6,7 +6,7 @@ function check(){
     var q3 = document.test.question3.value;
     var q4 = document.test.question4.value;
 
-    if(q1 == "2.528 * 10^26"){
+    if(q1 == "2.529 * 10^26"){
         grade++
     }
 
